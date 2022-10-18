@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun isFieldEmpty(): Boolean {
         binding.apply {
-            if(edA.text.isNullOrEmpty()) edA.error = "Поле должно быть заполнено"
-            if(edB.text.isNullOrEmpty()) edB.error = "Поле должно быть заполнено"
+            if(edA.text.isNullOrEmpty()) edA.error = getString(R.string.error)
+            if(edB.text.isNullOrEmpty()) edB.error = getString(R.string.error)
             return edA.text.isNullOrEmpty() || edB.text.isNullOrEmpty()
 
         }
