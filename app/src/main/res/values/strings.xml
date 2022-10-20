@@ -6,4 +6,6 @@
     <string name="input_b">Введите \"b\"</string>
     <string name="result">Результат</string>
     <string name="error">Поле должно быть заполнено</string>
+    <string name="about_title">Pythagorean theorem %1$s</string>
+    <string name="about_message">Created by Anastasia Bogdanova</string>
 </resources>

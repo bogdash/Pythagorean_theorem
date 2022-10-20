@@ -2,7 +2,10 @@ package com.example.pythagoreantheorem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.example.pythagoreantheorem.databinding.ActivityMainBinding
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -13,6 +16,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    private fun showInfo() {
+        val dialogTitle = getString(R.string.about_title,
+            BuildConfig.VERSION_NAME)
+        val dialogMessage = getString(R.string.about_message)
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(dialogTitle)
+        builder.setMessage(dialogMessage)
+        builder.create().show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.about_item) {
+            showInfo()
+        }
+        return true
     }
 
     fun onClickResult(view: View){
@@ -40,4 +67,5 @@ class MainActivity : AppCompatActivity() {
         }
         return sqrt( (a.pow(2) + b.pow(2)) ).toString()
     }
+
 }
