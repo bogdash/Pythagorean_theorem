@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun isFieldEmpty(): Boolean {
         binding.apply {
-            if(edA.text.isNullOrEmpty()) edA.error = getString(R.string.error)
-            if(edB.text.isNullOrEmpty()) edB.error = getString(R.string.error)
+            if(edA.text.isNullOrEmpty() || edA.text.toString().toDouble() == 0.0) edA.error = getString(R.string.error)
+            if(edB.text.isNullOrEmpty() || edB.text.toString().toDouble() == 0.0) edB.error = getString(R.string.error)
             return edA.text.isNullOrEmpty() || edB.text.isNullOrEmpty()
 
         }
