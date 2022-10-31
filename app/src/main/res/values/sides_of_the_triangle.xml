@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sides">
+        <item>Вычислить \"a\"</item>
+        <item>Вычислить \"b\"</item>
+        <item>Вычислить \"c\"</item>
+    </string-array>
+</resources>
