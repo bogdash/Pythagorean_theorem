@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">Pythagorean theorem</string>
-    <string name="title">Вычислить \"c\"</string>
+    <string name="title_a">Вычислить \"a\"</string>
+    <string name="title_b">Вычислить \"b\"</string>
+    <string name="title_c">Вычислить \"c\"</string>
     <string name="result_info">Результат:&#160;</string>
     <string name="input_a">Введите \"a\"</string>
     <string name="input_b">Введите \"b\"</string>
+    <string name="input_c">Введите \"c\"</string>
     <string name="result">Результат</string>
     <string name="error">Поле должно быть заполнено</string>
     <string name="about_title">Pythagorean theorem %1$s</string>
