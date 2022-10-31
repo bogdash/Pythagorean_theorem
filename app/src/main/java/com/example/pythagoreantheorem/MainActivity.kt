@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import com.example.pythagoreantheorem.databinding.ActivityMainBinding
 import kotlin.math.pow
@@ -16,6 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val spinner = findViewById<Spinner>(R.id.spinner)
+
+        val adapter: ArrayAdapter<*> = ArrayAdapter.createFromResource(
+            this,
+            R.array.sides,
+            android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
